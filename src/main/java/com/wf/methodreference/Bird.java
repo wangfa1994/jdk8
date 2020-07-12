@@ -1,13 +1,11 @@
 package com.wf.methodreference;
 
-import java.util.Comparator;
-
 /**
  * @Author: wangfa
- * @Date: 2020/7/5 19:07
+ * @Date: 2020/7/11 16:27
  * @Description:
  */
-public class Dog  implements Comparable<Dog> {
+public class Bird {
 
     private String  name;
 
@@ -40,7 +38,7 @@ public class Dog  implements Comparable<Dog> {
         this.age = age;
     }
 
-    public Dog(String name, Integer weight, Integer age) {
+    public Bird(String name, Integer weight, Integer age) {
         this.name = name;
         this.weight = weight;
         this.age = age;
@@ -48,17 +46,18 @@ public class Dog  implements Comparable<Dog> {
 
     @Override
     public String toString() {
-        return "Dog{" +
+        return "Bird{" +
                 "name='" + name + '\'' +
                 ", weight=" + weight +
                 ", age=" + age +
                 '}';
     }
 
-    @Override
-    public int compareTo(Dog o) {
-        return o.age-this.age;
+    public int compareWithName(Bird bird){
+        return  this.name.compareTo(bird.name);
     }
 
-
+    public  int compareWithWeight(Bird bird){
+        return this.age - bird.age;
+    }
 }

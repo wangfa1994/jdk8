@@ -20,6 +20,16 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        
+
+        /**
+         * 方法引用 主要是对复杂lambda表达式的一种简写
+         *
+         * 方法引用的四种形式
+         * 类::静态方法
+         * 实例对象::实例方法
+         * 类::实例方法
+         * 类::new
+         */
+
     }
 }

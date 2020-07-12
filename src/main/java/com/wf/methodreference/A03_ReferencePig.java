@@ -8,18 +8,18 @@ import java.util.List;
  * @Date: 2020/7/5 21:51
  * @Description: 方法引用二：   实例对象::实例方法名
  */
-public class A03_Reference {
+public class A03_ReferencePig {
 
     public static void main(String[] args) {
         // 比较器对象实例
-        A03_DogComparator comparator = new A03_DogComparator();
+        A03_PigComparator comparator = new A03_PigComparator();
 
-        Dog dog1 = new Dog("zhangsan",19,5);
-        Dog dog2 = new Dog("lisi",49,9);
-        Dog dog3 = new Dog("wangwu",33,6);
-        Dog dog4 = new Dog("zhaoliu",36,8);
+        Pig pig1 = new Pig("zhangsan",19,5);
+        Pig pig2 = new Pig("lisi",49,9);
+        Pig pig3 = new Pig("wangwu",33,6);
+        Pig pig4 = new Pig("zhaoliu",36,8);
 
-        List<Dog> list = Arrays.asList(dog1,dog2,dog3,dog4);
+        List<Pig> list = Arrays.asList(pig1,pig2,pig3,pig4);
 
         System.out.println("==========================");
         list.sort((param1,param2)->{

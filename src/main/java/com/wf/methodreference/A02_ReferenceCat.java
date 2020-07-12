@@ -5,27 +5,27 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import static com.wf.methodreference.Dog.compareWithName;
+import static com.wf.methodreference.Cat.compareWithName;
 
 /**
  * @Author: wangfa
  * @Date: 2020/7/5 19:07
  * @Description: 方法引用一：   类名::静态方法名
  */
-public class A02_Reference {
+public class A02_ReferenceCat {
 
 
     public static void main(String[] args) {
-        Dog dog1 = new Dog("zhangsan",19,5);
-        Dog dog2 = new Dog("lisi",49,9);
-        Dog dog3 = new Dog("wangwu",33,6);
-        Dog dog4 = new Dog("zhaoliu",36,8);
+        Cat cat1 = new Cat("zhangsan",19,5);
+        Cat cat2 = new Cat("lisi",49,9);
+        Cat cat3 = new Cat("wangwu",33,6);
+        Cat cat4 = new Cat("zhaoliu",36,8);
 
-        List<Dog> list = Arrays.asList(dog1,dog2,dog3,dog4);
+        List<Cat> list = Arrays.asList(cat1,cat2,cat3,cat4);
         System.out.println("方法引用版本一==========================");
 
         list.sort((param1,param2)->{
-            return Dog.compareWithName(param1,param2);
+            return Cat.compareWithName(param1,param2);
         });
         list.forEach(System.out::println);
 
@@ -35,7 +35,7 @@ public class A02_Reference {
          * 我们的静态方法刚好也是连个同类型的入参，并且也是返回一个整型结果
          * 编译器就会认为他们是同类型的，可以进行处理
          */
-        list.sort(Dog::compareWithWeight);
+        list.sort(Cat::compareWithWeight);
         list.forEach(System.out::println);
 
         /**
